@@ -40,7 +40,7 @@ RUN conda update conda
 #RUN conda update --all
 RUN pip3 install --user numpy
 RUN pip  install --user opencv-contrib-python
-RUN pip3 install --user torch torchvision
+RUN conda install -c pytorch magma-cuda101 torchvision
 # Configuriar accesso ao Jupyter
 RUN mkdir /home/ubuntu/notebooks
 RUN jupyter notebook --generate-config --allow-root
